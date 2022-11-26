@@ -1,0 +1,30 @@
+Main menu:
+	Plain de zombie qui cour ou marche sur une platform
+
+Joueur:
+	Sors l'arme au début du niveau puis ne la sert jamais
+
+	accoupie
+
+annimattion tombé, 
+	joueur pas sur le sol et l'animation de jump est arrèter.
+
+Ennemi:
+	Spawn aléatoirement sur différent spawn de la map et si le joueur a dépasser le spawn
+	aucune ennemi arrive a se spawn.
+
+	ennemi qui cour, marche, saute
+
+	spawn dans les air et meur plas dos sur le sol
+
+	ennemi 4 pates
+
+	ennemi Speed
+	Frames.SetAnimationSpeed("Anim Name", speed)
+
+Map:
+	le joueur avance dans la map et tue les ennemie.
+
+
+truc demander a Fred:
+	Ennemi attack quand le jouaure est dans la range d'attack

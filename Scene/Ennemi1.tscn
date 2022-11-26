@@ -62,7 +62,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 5.5, 13.5 )
 
-[node name="Ennemi" type="KinematicBody2D"]
+[node name="Ennemi1" type="KinematicBody2D"]
 script = ExtResource( 30 )
 __meta__ = {
 "_edit_lock_": true
@@ -71,7 +71,7 @@ __meta__ = {
 [node name="Apparence" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Mort"
-frame = 5
+frame = 2
 playing = true
 __meta__ = {
 "_edit_lock_": true
