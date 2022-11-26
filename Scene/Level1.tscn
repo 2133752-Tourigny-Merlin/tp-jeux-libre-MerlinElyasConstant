@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Spawn1" type="Position2D" parent="."]
+
+[node name="Spawn2" type="Position2D" parent="."]
