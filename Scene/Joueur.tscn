@@ -1,0 +1,143 @@
+[gd_scene load_steps=52 format=2]
+
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterIdle_1.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterIdle_3.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterIdle_2.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterIdle_0.png" type="Texture" id=4]
+[ext_resource path="res://Script/Joueur.gd" type="Script" id=5]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolDead_08.png" type="Texture" id=8]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolAimingRunning_2.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolAimingRunning_4.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolAimingRunning_5.png" type="Texture" id=17]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolAimingRunning_6.png" type="Texture" id=18]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolDead_00.png" type="Texture" id=19]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolAimingRunning_0.png" type="Texture" id=20]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolDead_03.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolAimingRunning_3.png" type="Texture" id=22]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolDead_04.png" type="Texture" id=23]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolDead_05.png" type="Texture" id=24]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolDead_06.png" type="Texture" id=25]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolDead_02.png" type="Texture" id=26]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolAimingRunning_7.png" type="Texture" id=27]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolDead_01.png" type="Texture" id=28]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolAimingRunning_1.png" type="Texture" id=29]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolDead_07.png" type="Texture" id=30]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolJumping_0.png" type="Texture" id=31]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolRolling_2.png" type="Texture" id=32]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolRolling_3.png" type="Texture" id=33]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolShooting_0.png" type="Texture" id=35]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolRolling_4.png" type="Texture" id=36]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolCrouchShooting_1.png" type="Texture" id=37]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolHit_0.png" type="Texture" id=38]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolShooting_1.png" type="Texture" id=39]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolCrouchShooting_0.png" type="Texture" id=40]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolRolling_0.png" type="Texture" id=41]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolHit_1.png" type="Texture" id=42]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolDraw_0.png" type="Texture" id=43]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolRolling_1.png" type="Texture" id=44]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolJumping_1.png" type="Texture" id=45]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterSliding_0.png" type="Texture" id=47]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolFalling_1.png" type="Texture" id=48]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterGrabbingLedge_0.png" type="Texture" id=49]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterGrabbingLedge_6.png" type="Texture" id=50]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterGrabbingLedge_1.png" type="Texture" id=51]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolDead_10.png" type="Texture" id=52]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterGrabbingLedge_2.png" type="Texture" id=53]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterGrabbingLedge_4.png" type="Texture" id=54]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolDead_09.png" type="Texture" id=55]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterGrabbingLedge_3.png" type="Texture" id=56]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterGrabbingLedge_5.png" type="Texture" id=57]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterGrabbingLedge_7.png" type="Texture" id=58]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterSliding_1.png" type="Texture" id=59]
+[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolFalling_0.png" type="Texture" id=60]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 38 ), ExtResource( 42 ) ],
+"loop": true,
+"name": "CoupArme",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 29 ), ExtResource( 9 ), ExtResource( 22 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "CourirArme",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 43 ), ExtResource( 35 ) ],
+"loop": true,
+"name": "Degainer",
+"speed": 6.0
+}, {
+"frames": [ ExtResource( 47 ), ExtResource( 59 ) ],
+"loop": true,
+"name": "Glisser",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 49 ), ExtResource( 51 ), ExtResource( 53 ), ExtResource( 56 ), ExtResource( 54 ), ExtResource( 57 ), ExtResource( 50 ), ExtResource( 58 ) ],
+"loop": true,
+"name": "Grimper",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 1 ), ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "Innactif",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 28 ), ExtResource( 26 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 30 ), ExtResource( 8 ), ExtResource( 55 ), ExtResource( 52 ) ],
+"loop": true,
+"name": "MourirArme",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 41 ), ExtResource( 44 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 36 ) ],
+"loop": true,
+"name": "RouladeArme",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 31 ), ExtResource( 45 ) ],
+"loop": true,
+"name": "SauterArme",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 35 ), ExtResource( 39 ) ],
+"loop": true,
+"name": "Tirer",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 40 ), ExtResource( 37 ) ],
+"loop": true,
+"name": "TirerSol",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 60 ), ExtResource( 48 ) ],
+"loop": true,
+"name": "TomberArme",
+"speed": 5.0
+} ]
+
+[node name="Joueur" type="KinematicBody2D"]
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Apparence" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "Glisser"
+playing = true
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Collision" type="CollisionPolygon2D" parent="."]
+visible = false
+polygon = PoolVector2Array( -8, -8, 0, -16, 8, -8, 8, 16, -8, 16 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+rotating = true
+current = true
+zoom = Vector2( 0.8, 0.8 )
+smoothing_enabled = true
+smoothing_speed = 12.0
