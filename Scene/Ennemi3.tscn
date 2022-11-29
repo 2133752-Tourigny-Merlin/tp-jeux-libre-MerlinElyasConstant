@@ -28,6 +28,8 @@ script = ExtResource( 1 )
 [node name="Apparence" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Mort"
+frame = 5
+playing = true
 __meta__ = {
 "_edit_lock_": true
 }

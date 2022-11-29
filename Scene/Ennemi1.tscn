@@ -71,7 +71,7 @@ __meta__ = {
 [node name="Apparence" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Mort"
-frame = 7
+frame = 5
 playing = true
 __meta__ = {
 "_edit_lock_": true
