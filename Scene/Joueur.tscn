@@ -122,9 +122,7 @@ __meta__ = {
 
 [node name="Apparence" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "Glisser"
-frame = 1
-playing = true
+animation = "Tirer"
 __meta__ = {
 "_edit_lock_": true
 }
