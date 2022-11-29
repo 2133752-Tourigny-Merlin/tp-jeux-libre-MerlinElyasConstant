@@ -1,9 +1,6 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scene/Ennemi1.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scene/Ennemi2.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scene/Joueur.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Scene/Level1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Level1.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 319, 10 )
@@ -11,11 +8,8 @@ extents = Vector2( 319, 10 )
 [node name="Main" type="Node2D"]
 position = Vector2( 1, 0 )
 
-[node name="Level1" parent="." instance=ExtResource( 4 )]
-position = Vector2( 0, -3 )
-
-[node name="Ennemi" parent="." instance=ExtResource( 1 )]
-position = Vector2( 600, 100 )
+[node name="Level1" parent="." instance=ExtResource( 5 )]
+position = Vector2( 202, -57 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 position = Vector2( -74, 10 )
@@ -24,12 +18,3 @@ position = Vector2( -74, 10 )
 self_modulate = Color( 0.72549, 0.0509804, 0.729412, 1 )
 position = Vector2( 411, 203 )
 shape = SubResource( 1 )
-
-[node name="Ennemi2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 556, 109 )
-
-[node name="Joueur" parent="." instance=ExtResource( 3 )]
-position = Vector2( 348, 109 )
-
-[node name="Ennemi3" parent="." instance=ExtResource( 4 )]
-position = Vector2( 443, -14 )
