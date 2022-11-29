@@ -11,7 +11,6 @@ config_version=4
 [application]
 
 config/name="tp-jeux-libre-MerlinElyasConstant"
-run/main_scene="res://Scene/Main.tscn"
 config/icon="res://icon.png"
 <<<<<<<HEADrun/main_scene="res://Scene/Joueur.tscn"
 
