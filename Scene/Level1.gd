@@ -8,7 +8,8 @@ func _ready():
 	pass
 
 func _process(delta):
-	if $Joueur.position.x <= $Spawn1.position.x and index_ajout_ennemi ==10:
+	print(index_ajout_ennemi)
+	if index_ajout_ennemi ==100:
 		AddEnnemi();
 		index_ajout_ennemi = 0
 	index_ajout_ennemi = index_ajout_ennemi + 1
@@ -19,6 +20,7 @@ func AddEnnemi():
 	var nouveau_ennemi1 = load("res://Scene/Ennemi1.tscn").instance()
 	nouveau_ennemi1.position.x = $Spawn1.position.x
 	nouveau_ennemi1.position.y = $Spawn1.position.y
+	add_child(nouveau_ennemi1)
 
 func DeleteEnnemi():
 	pass

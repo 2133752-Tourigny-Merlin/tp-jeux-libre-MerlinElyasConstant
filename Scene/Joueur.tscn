@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterIdle_1.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterIdle_3.png" type="Texture" id=2]
@@ -114,6 +114,9 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 5.5, 13.5 )
+
 [node name="Joueur" type="KinematicBody2D"]
 script = ExtResource( 5 )
 __meta__ = {
@@ -123,12 +126,7 @@ __meta__ = {
 [node name="Apparence" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "TomberArme"
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Collision" type="CollisionPolygon2D" parent="."]
-polygon = PoolVector2Array( -8, -8, 0, -16, 8, -8, 8, 16, -8, 16 )
+playing = true
 __meta__ = {
 "_edit_lock_": true
 }
@@ -136,7 +134,7 @@ __meta__ = {
 [node name="Camera2D" type="Camera2D" parent="."]
 rotating = true
 current = true
-zoom = Vector2( 0.8, 0.8 )
+zoom = Vector2( 0.5, 0.5 )
 smoothing_enabled = true
 smoothing_speed = 12.0
 __meta__ = {
@@ -148,3 +146,7 @@ position = Vector2( 12, -4 )
 
 [node name="SpawnBalleGenoux" type="Position2D" parent="."]
 position = Vector2( 12, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.5, 1.5 )
+shape = SubResource( 2 )
