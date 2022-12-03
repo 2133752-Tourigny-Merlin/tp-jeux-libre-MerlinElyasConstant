@@ -1,10 +1,11 @@
-[gd_scene load_steps=53 format=2]
+[gd_scene load_steps=54 format=2]
 
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterIdle_1.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterIdle_3.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterIdle_2.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterIdle_0.png" type="Texture" id=4]
 [ext_resource path="res://Script/Joueur.gd" type="Script" id=5]
+[ext_resource path="res://Assets/light.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolDead_08.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolAimingRunning_2.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolAimingRunning_4.png" type="Texture" id=16]
@@ -150,3 +151,9 @@ position = Vector2( 12, 0 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1.5, 1.5 )
 shape = SubResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 3, 7.00003 )
+scale = Vector2( 0.200195, 0.185547 )
+texture = ExtResource( 6 )
+energy = 0.6
