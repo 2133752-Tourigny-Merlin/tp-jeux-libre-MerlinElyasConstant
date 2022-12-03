@@ -19,13 +19,13 @@ margin_right = 0.0239258
 margin_bottom = 0.200012
 
 [node name="Score" type="Label" parent="VBoxContainer"]
-margin_right = 1023.0
+margin_right = 1022.0
 margin_bottom = 14.0
 text = "Score : "
 
 [node name="PointDeVie" type="Label" parent="VBoxContainer"]
 margin_top = 18.0
-margin_right = 1023.0
+margin_right = 1022.0
 margin_bottom = 32.0
 text = "Point de vie :"
 
