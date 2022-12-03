@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterIdle_3.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterIdle_2.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterIdle_0.png" type="Texture" id=4]
-[ext_resource path="res://Script/Joueur.gd" type="Script" id=5]
+[ext_resource path="res://Script/JoueurTest.gd" type="Script" id=5]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolDead_08.png" type="Texture" id=8]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolAimingRunning_2.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolAimingRunning_4.png" type="Texture" id=16]
@@ -119,10 +119,12 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_lock_": true
 }
+max_speed = null
 
 [node name="Apparence" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-animation = "TomberArme"
+animation = "Tirer"
+playing = true
 __meta__ = {
 "_edit_lock_": true
 }
