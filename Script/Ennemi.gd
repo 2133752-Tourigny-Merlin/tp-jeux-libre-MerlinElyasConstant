@@ -14,8 +14,4 @@ func _physics_process(delta):
 	_animated_sprite.play("Marche");
 	_animated_sprite.scale.x = -1
 	velocity = move_and_slide(velocity, Vector2.UP)
-
-func hit(damage):
-	life -= damage
-	if life <= 0:
-		queue_free()
+	

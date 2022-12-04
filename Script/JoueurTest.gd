@@ -36,8 +36,8 @@ func movement_loop():
 	
 	var right = Input.is_action_pressed("ui_right")
 	var left = Input.is_action_pressed("ui_left")
-	var jump = Input.is_action_just_pressed("ui_accept")
-	var shoot = Input.is_action_just_pressed("ui_down")
+	var jump = Input.is_action_just_pressed("ui_up")
+	var shoot = Input.is_action_just_pressed("ui_accept")
 	
 	var dirx = int(right) - int(left)
 	

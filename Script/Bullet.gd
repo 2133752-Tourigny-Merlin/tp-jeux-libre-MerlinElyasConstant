@@ -8,10 +8,11 @@ func start(pos, direction):
 	velocity = Vector2(speed * direction, 0)
 	
 func  _process(delta):
-	var collision = move_and_slide(velocity)
+	var collision = move_and_collide(velocity * delta)
 	if collision:
 		if collision.collider.has_method("hit"):
 			collision.collider.hit(20)
 		queue_free()
+		
 
 	
