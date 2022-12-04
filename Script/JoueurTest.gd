@@ -10,7 +10,7 @@ onready var _animated_sprite = get_node("Apparence")
 var vel = Vector2()
 var jump_count = 0
 var bullet = preload("res://Scene/Bullet.tscn")
-
+var direction = 1
 
 export(int) var max_speed = 200
 
@@ -44,11 +44,14 @@ func movement_loop():
 	if dirx == -1 : 
 		vel.x = max(vel.x - ACCEL, -max_speed)
 		$Apparence.flip_h = true
+		direction = -1
+		$SpawnBalle.position.x = -12
 		
 	elif dirx == 1 : 
 		vel.x = min(vel.x + ACCEL, max_speed)
 		$Apparence.flip_h = false
-	
+		direction = 1
+		$SpawnBalle.position.x = 12
 	else:
 		vel.x = lerp(vel.x, 0, 0.15)
 		vel.x = 0
@@ -60,7 +63,9 @@ func movement_loop():
 	
 	if shoot:
 		_animated_sprite.play("Tirer")
-		var b = 
+		var b = bullet.instance()
+		b.start($SpawnBalle.global_position , direction)
+		get_parent().add_child(b)
 		
 func animation_loop():
 	

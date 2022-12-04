@@ -9,7 +9,9 @@ func start(pos, direction):
 	
 func  _process(delta):
 	var collision = move_and_slide(velocity)
+	if collision:
+		if collision.collider.has_method("hit"):
+			collision.collider.hit(20)
+		queue_free()
 
-func destroy(): 
-	queue_free()
 	
