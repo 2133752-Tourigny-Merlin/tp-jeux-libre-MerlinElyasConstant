@@ -1,10 +1,18 @@
 extends KinematicBody2D
 
 export var speed = 500
-var velocity = Vector2(10,0)
+var velocity = Vector2()
 
-func _ready():
-	pass # Replace with function body.
+func start(pos, direction):
+	position = pos 
+	velocity = Vector2(speed * direction, 0)
+	
+func  _process(delta):
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		if collision.collider.has_method("hit"):
+			collision.collider.hit(20)
+		queue_free()
+		
 
-func _physics_process(delta):
-	translate(velocity)
+	

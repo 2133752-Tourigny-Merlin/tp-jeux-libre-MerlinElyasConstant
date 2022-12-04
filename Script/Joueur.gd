@@ -13,7 +13,7 @@ var velocity = Vector2()
 func _physics_process(delta):
 	velocity.y += 0.05 * GRAVITY
 
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_just_pressed("ui_left"):
 		velocity.x = -WALK_SPEED
 		$Apparence.flip_h = true;
 		_animated_sprite.play("CourirArme")
@@ -28,7 +28,9 @@ func _physics_process(delta):
 		
 	if Input.is_action_pressed("ui_up") and is_on_floor():
 		velocity.y = -JUMP_FORCE
-		_animated_sprite.play("SauterArme")
+		while !is_on_floor():
+			_animated_sprite.play("SauterArme")
+	
 		
 		
 	velocity = move_and_slide(velocity, Vector2.UP)
