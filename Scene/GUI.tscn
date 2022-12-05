@@ -46,7 +46,7 @@ position = Vector2( 98, 17 )
 texture = ExtResource( 1 )
 
 [node name="CoeurPlein2" type="Sprite" parent="VBoxContainer/PointDeVie"]
-position = Vector2( 114, 17 )
+position = Vector2( 114, 18 )
 texture = ExtResource( 1 )
 
 [node name="CoeurPlein3" type="Sprite" parent="VBoxContainer/PointDeVie"]
