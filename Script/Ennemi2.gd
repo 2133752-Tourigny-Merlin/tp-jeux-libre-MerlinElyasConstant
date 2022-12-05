@@ -10,6 +10,7 @@ var life = 100
 var is_dead = false
 var moving_left = true
 
+
 func _physics_process(delta):
 	detect_turn_around()
 	if is_dead == false:
@@ -57,4 +58,7 @@ func detect_turn_around():
 			moving_left = true
 
 	
-	
+
+
+func _on_Area2D_area_entered(area):
+	print(area)

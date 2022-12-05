@@ -62,7 +62,6 @@ func movement_loop():
 		jump_count += 1
 	
 	if shoot:
-		_animated_sprite.play("Tirer")
 		var b = bullet.instance()
 		b.start($SpawnBalle.global_position , direction)
 		get_parent().add_child(b)
@@ -82,6 +81,7 @@ func animation_loop():
 		_animated_sprite.play("TomberArme")
 		
 	
+		
 func animation_play(animation):
 	if _animated_sprite.current_animation != animation:
 		_animated_sprite.play(animation)
