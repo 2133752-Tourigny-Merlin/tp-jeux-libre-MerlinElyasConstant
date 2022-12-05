@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const GRAVITY = 1500
+const GRAVITY = 1800
 const UP = Vector2(0,-1)
 const ACCEL = 10
 
@@ -45,13 +45,13 @@ func movement_loop():
 		vel.x = max(vel.x - ACCEL, -max_speed)
 		$Apparence.flip_h = true
 		direction = -1
-		$SpawnBalle.position.x = -12
+		$SpawnBalle.position.x = -7
 		
 	elif dirx == 1 : 
 		vel.x = min(vel.x + ACCEL, max_speed)
 		$Apparence.flip_h = false
 		direction = 1
-		$SpawnBalle.position.x = 12
+		$SpawnBalle.position.x = 7
 	else:
 		vel.x = lerp(vel.x, 0, 0.15)
 		vel.x = 0
