@@ -9,6 +9,7 @@ var velocity = Vector2()
 var life = 100
 var is_dead = false
 
+
 func _physics_process(delta):
 	
 	if is_dead == false:
@@ -28,15 +29,16 @@ func  hit(damage):
 		dead()
 
 func _on_Timer_timeout():
-	pass
+	queue_free()
 	
 
 func dead(): 
 	is_dead = true
 	velocity = Vector2.ZERO
 	_animated_sprite.play("Mort")
-	$Timer.start(10)
+	$Timer.start()
+	
 
-	 
-	
-	
+
+func _on_Area2D_area_entered(area):
+	print(area)
