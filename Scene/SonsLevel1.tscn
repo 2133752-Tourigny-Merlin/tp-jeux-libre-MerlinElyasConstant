@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Musique/4 mins of zombie sounds.wav" type="AudioStream" id=1]
+[ext_resource path="res://Assets/Musique/Bob Marley - Everything's Gonna Be Alright.wav" type="AudioStream" id=2]
+
+[node name="SonsLevel1" type="Node2D"]
+
+[node name="MusiqueNiveau1" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+volume_db = -17.0
+autoplay = true
+max_distance = 10000.0
+
+[node name="SonsZombie" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+volume_db = -10.0
+autoplay = true
+max_distance = 10000.0
