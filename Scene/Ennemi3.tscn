@@ -20,7 +20,7 @@ animations = [ {
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 20 ), ExtResource( 21 ), ExtResource( 23 ), ExtResource( 18 ), ExtResource( 17 ), ExtResource( 22 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 27 ) ],
-"loop": true,
+"loop": false,
 "name": "Mort",
 "speed": 5.0
 } ]

@@ -97,6 +97,7 @@ script = SubResource( 3 )
 visible = false
 position = Vector2( 8, 18 )
 scale = Vector2( 1.21875, 0.4375 )
+z_index = 1
 texture = ExtResource( 31 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]

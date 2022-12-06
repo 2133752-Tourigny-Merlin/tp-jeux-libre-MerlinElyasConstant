@@ -1,14 +1,16 @@
 extends KinematicBody2D
 
 
-const GRAVITY = 600
-const WALK_SPEED = 50
+const GRAVITY = 120
+const WALK_SPEED = 60
 
 onready var _animated_sprite = $Apparence
 var velocity = Vector2()
 var life = 100
 var is_dead = false
 var moving_left = true
+
+var ennemi1Tuer = 0
 
 func _physics_process(delta):
 	detect_turn_around()
@@ -26,8 +28,15 @@ func _physics_process(delta):
 			$RayCast2D.position.y = -8
 			
 		velocity.y += 0.05 * GRAVITY
-
 		velocity = move_and_slide(velocity, Vector2.UP)
+		for i in get_slide_count():
+			var collision = get_slide_collision(i)
+			if collision:
+				if collision.collider.has_method("touche"):
+					collision.collider.touche()
+					$BloodSplash0.visible = true
+					queue_free()
+			
 #	if is_dead:
 #		print("test")
 #		queue_free()
@@ -46,6 +55,8 @@ func dead():
 	velocity = Vector2.ZERO
 	_animated_sprite.play("Mort")
 	$CollisionShape2D.disabled = true
+	ennemi1Tuer = ennemi1Tuer+1
+	print(ennemi1Tuer)
 	$Timer.start()
 	
 func detect_turn_around():

@@ -1124,8 +1124,10 @@ scale = Vector2( 2.69688, 1.57083 )
 texture = ExtResource( 4 )
 
 [node name="Spawn1" type="Position2D" parent="."]
+position = Vector2( 165, 527 )
 
 [node name="Spawn2" type="Position2D" parent="."]
+position = Vector2( 1266, 325 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource( 27 )
