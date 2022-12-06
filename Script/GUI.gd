@@ -12,4 +12,4 @@ func _ready():
 
 func _process(delta):
 	score = get_parent().get_parent().get_parent().ennemiTuer
-	$VBoxContainer/Score/LabelScore.text = str(score)
+	$VBoxContainer/Score/LabelScore.text = str(score) + " /50"

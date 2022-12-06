@@ -6,12 +6,11 @@ var index_ajout_ennemi = 0
 
 var ennemiMax = 50
 var ennemiPresent = 0
-var ennemiTuer = 0
+
 func _ready():
 	pass
 
 func _process(delta):
-	#get_parent().ennemiTuer = get_parent().ennemiTuer + $Ennemi1.ennemi1Tuer
 	if ennemiPresent <= ennemiMax:
 		if index_ajout_ennemi == 60 || index_ajout_ennemi == 120:
 			var random = rng.randf_range(1, 5)
@@ -69,5 +68,3 @@ func AddEnnemi5():
 	add_child(nouveau_ennemi1)
 	ennemiPresent = ennemiPresent +1
 
-func DeleteEnnemi():
-	pass

@@ -8,10 +8,11 @@ func _ready():
 
 func _process(delta):
 	if ennemiTuer == 50:
-		$Level1.queue_free()
-		$Joueur.queue_free()
+		print(get_node("Level1"))
+		get_node("Level1").queue_free()
+		$Joueur.position.x = 0
+		$Joueur.position.y = 0
 		add_child(load("res://Scene/Level2.tscn").instance())
-		add_child(load("res://Scene/Joueur.tscn").instance())
-		ennemiTuer = 0
+		ennemiTuer = ennemiTuer +1
 	print(ennemiTuer)
 		#print(ennemiTuerTotal)
