@@ -14,12 +14,15 @@ script = ExtResource( 1 )
 position = Vector2( -2, -2 )
 
 [node name="Ennemi1" parent="." instance=ExtResource( 3 )]
+visible = false
 position = Vector2( 38, 307 )
 
 [node name="Ennemi2" parent="." instance=ExtResource( 4 )]
+visible = false
 position = Vector2( -28, 300 )
 
 [node name="Ennemi3" parent="." instance=ExtResource( 5 )]
+visible = false
 position = Vector2( 7, 306 )
 
 [node name="SonsLevel1" parent="." instance=ExtResource( 6 )]

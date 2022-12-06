@@ -5,7 +5,7 @@ func _ready():
 
 
 func _on_Commencer_pressed():
-	get_tree().change_scene("res://Scene/Level1.tscn")
+	get_tree().change_scene("res://Scene/Main.tscn")
 
 
 func _on_Quitter_pressed():

@@ -7,8 +7,6 @@ onready var _animated_sprite = $Apparence
 var velocity = Vector2()
 var index = 0;
 
-var ennemi3Tuer = 0
-
 func _physics_process(delta):
 	if GRAVITY > 0:
 		velocity.y += 0.05 * GRAVITY
@@ -20,7 +18,7 @@ func _physics_process(delta):
 		for i in get_slide_count():
 			collision = get_slide_collision(i)
 			if collision:
-				ennemi3Tuer = ennemi3Tuer+1
+				get_parent().get_parent().ennemiTuer = get_parent().get_parent().ennemiTuer +1
 				GRAVITY = 0
 				velocity.y = 0
 				$BloodSplash0.visible = true

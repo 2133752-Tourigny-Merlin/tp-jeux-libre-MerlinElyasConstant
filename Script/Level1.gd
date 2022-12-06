@@ -11,6 +11,7 @@ func _ready():
 	pass
 
 func _process(delta):
+	#get_parent().ennemiTuer = get_parent().ennemiTuer + $Ennemi1.ennemi1Tuer
 	if ennemiPresent <= ennemiMax:
 		if index_ajout_ennemi == 60 || index_ajout_ennemi == 120:
 			var random = rng.randf_range(1, 5)

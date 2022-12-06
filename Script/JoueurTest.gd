@@ -15,14 +15,6 @@ var vie = 3
 
 export(int) var max_speed = 200
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass
-
-
-func _process(delta):
-	pass
-	
 func touche():
 	if vie == 3:
 		$Camera2D/Control/VBoxContainer/PointDeVie/CoeurPlein3.visible = false

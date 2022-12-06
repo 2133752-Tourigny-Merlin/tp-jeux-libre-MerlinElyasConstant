@@ -10,8 +10,6 @@ var life = 100
 var is_dead = false
 var moving_left = true
 
-var ennemi2Tuer = 0
-
 func _physics_process(delta):
 	detect_turn_around()
 	if is_dead == false:
@@ -56,7 +54,7 @@ func dead():
 	_animated_sprite.play("Mort")
 	$CollisionShape2D.disabled = true
 	$BloodSplash0.visible = true
-	ennemi2Tuer = ennemi2Tuer +1
+	get_parent().get_parent().ennemiTuer = get_parent().get_parent().ennemiTuer +1
 	$Timer.start()
 	
 func detect_turn_around():
