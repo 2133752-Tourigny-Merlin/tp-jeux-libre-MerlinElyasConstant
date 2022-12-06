@@ -13,27 +13,31 @@ var bullet = preload("res://Scene/Bullet.tscn")
 var direction = 1
 var vie = 3
 
+var estMort = false
+
 export(int) var max_speed = 200
 
 func touche():
-	if vie == 3:
+	vie -=1
+	if vie == 2:
 		$Camera2D/Control/VBoxContainer/PointDeVie/CoeurPlein3.visible = false
-		vie = vie -1
-	elif vie == 2:
+	elif vie == 1:
 		$Camera2D/Control/VBoxContainer/PointDeVie/CoeurPlein2.visible = false
-		vie = vie -1
-	else:
+	elif vie == 0:
 		$Camera2D/Control/VBoxContainer/PointDeVie/CoeurPlein1.visible = false
 		$Camera2D/Control/VBoxContainer/LabelGameOver.visible = true
-		vie = vie -1
 		$CollisionShape2D.disabled = true
 		GRAVITY = 0
+		estMort = true
+		if _animated_sprite.frame == 10:
+			get_tree().change_scene("res://Scene/MenuDemarer.tscn")
 		$Timer.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
 	movement_loop()
 	animation_loop()
+	
 	vel.y += GRAVITY * delta
 	vel = move_and_slide(vel, UP)
 
@@ -48,6 +52,9 @@ func movement_loop():
 	
 	var dirx = int(right) - int(left)
 	
+	if estMort == true:
+		dirx = 0
+		jump = false
 	
 	if dirx == -1 : 
 		vel.x = max(vel.x - ACCEL, -max_speed)
@@ -86,7 +93,7 @@ func animation_loop():
 			_animated_sprite.play("CourirArme")
 			
 		if vel.x == 0:
-			_animated_sprite.play("Innactif")
+			_animated_sprite.play("Degainer")
 			$Camera2D/Control/VBoxContainer/FlecheDroite.modulate = "ffffff"
 			$Camera2D/Control/VBoxContainer/FlecheGauche.modulate = "ffffff"
 			$Camera2D/Control/VBoxContainer/FlecheHaut.modulate = "ffffff"

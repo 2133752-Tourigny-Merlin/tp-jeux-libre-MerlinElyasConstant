@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=2]
+[gd_scene load_steps=53 format=2]
 
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterIdle_1.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterIdle_3.png" type="Texture" id=2]
@@ -34,7 +34,6 @@
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolCrouchShooting_0.png" type="Texture" id=40]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolRolling_0.png" type="Texture" id=41]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolHit_1.png" type="Texture" id=42]
-[ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolDraw_0.png" type="Texture" id=43]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolRolling_1.png" type="Texture" id=44]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterPistolJumping_1.png" type="Texture" id=45]
 [ext_resource path="res://Assets/Assets Zombie/Main Character/characterSliding_0.png" type="Texture" id=47]
@@ -64,8 +63,8 @@ animations = [ {
 "name": "CourirArme",
 "speed": 10.0
 }, {
-"frames": [ ExtResource( 4 ), ExtResource( 43 ), ExtResource( 35 ) ],
-"loop": true,
+"frames": [ ExtResource( 35 ) ],
+"loop": false,
 "name": "Degainer",
 "speed": 6.0
 }, {
@@ -143,9 +142,9 @@ __meta__ = {
 
 [node name="Control" parent="Camera2D" instance=ExtResource( 6 )]
 margin_left = -252.0
-margin_top = -147.0
-margin_right = -93.0
-margin_bottom = -95.0
+margin_top = -148.0
+margin_right = -252.0
+margin_bottom = -148.0
 
 [node name="SpawnBalle" type="Position2D" parent="."]
 position = Vector2( 7, -4 )

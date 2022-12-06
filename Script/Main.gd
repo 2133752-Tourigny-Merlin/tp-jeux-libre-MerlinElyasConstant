@@ -12,7 +12,9 @@ func _process(delta):
 		get_node("Level1").queue_free()
 		$Joueur.position.x = 0
 		$Joueur.position.y = 0
-		add_child(load("res://Scene/Level2.tscn").instance())
+		$Joueur/Camera2D/Control/CompteARebours.secondes = 30
+		$Joueur/Camera2D/Control/CompteARebours.minutes = 3
+		add_child(load("res://Scene/Level2Constant.tscn").instance())
 		ennemiTuer = ennemiTuer +1
 	print(ennemiTuer)
 		#print(ennemiTuerTotal)

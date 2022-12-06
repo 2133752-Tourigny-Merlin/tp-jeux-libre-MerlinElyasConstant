@@ -34,4 +34,8 @@ func _physics_process(delta):
 
 
 func _on_Timer_timeout():
-	dsec -= 1
+	if  dsec == 0 and secondes == 0 and minutes == 0:
+		print(get_parent().get_parent().get_parent().vie)
+		get_parent().get_parent().get_parent().vie = 0
+	else:
+		dsec -= 1
