@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
 
-const GRAVITY = 600
+const GRAVITY = 100
 const WALK_SPEED = 50
 const JUMP_FORCE = 600
 onready var _animated_sprite = $Apparence
