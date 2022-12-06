@@ -39,14 +39,15 @@ func _physics_process(delta):
 #		print("test")
 #		queue_free()
 		
-
+func _on_Timer_timeout():
+	queue_free()
+		
+		
 func  hit(damage):
 	life -= damage
 	if life <= 0:
 		dead()
 
-func _on_Timer_timeout():
-	queue_free()
 	
 func dead(): 
 	is_dead = true

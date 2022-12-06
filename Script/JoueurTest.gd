@@ -12,7 +12,7 @@ var jump_count = 0
 var bullet = preload("res://Scene/Bullet.tscn")
 var direction = 1
 var vie = 3
-
+var est_mort = false
 export(int) var max_speed = 200
 
 func touche():
@@ -28,6 +28,8 @@ func touche():
 		vie = vie -1
 		$CollisionShape2D.disabled = true
 		GRAVITY = 0
+		vel = Vector2.ZERO
+		est_mort = true
 		$Timer.start()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -44,10 +46,13 @@ func movement_loop():
 	var right = Input.is_action_pressed("ui_right")
 	var left = Input.is_action_pressed("ui_left")
 	var jump = Input.is_action_just_pressed("ui_up")
-	var shoot = Input.is_action_just_pressed("ui_accept")
+	var shoot = Input.is_action_pressed("ui_accept")
 	
 	var dirx = int(right) - int(left)
 	
+	if est_mort == true:
+		dirx = 0
+		jump = false
 	
 	if dirx == -1 : 
 		vel.x = max(vel.x - ACCEL, -max_speed)
@@ -80,13 +85,14 @@ func movement_loop():
 			
 		get_parent().add_child(b)
 func animation_loop():
+	
 	if vie != 0:
 	
 		if vel.x != 0:
 			_animated_sprite.play("CourirArme")
 			
 		if vel.x == 0:
-			_animated_sprite.play("Innactif")
+			_animated_sprite.play("Degainer")
 			$Camera2D/Control/VBoxContainer/FlecheDroite.modulate = "ffffff"
 			$Camera2D/Control/VBoxContainer/FlecheGauche.modulate = "ffffff"
 			$Camera2D/Control/VBoxContainer/FlecheHaut.modulate = "ffffff"

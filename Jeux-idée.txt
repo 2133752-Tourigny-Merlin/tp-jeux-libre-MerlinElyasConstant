@@ -1,23 +1,21 @@
 Main menu:
-	Plain de zombie qui cour ou marche sur une platform
+	
 
 Joueur:
-	Sors l'arme au début du niveau puis ne la sert jamais
-
-	accoupie
+	Sors l'arme au début du niveau puis ne la sert jamais (résolue)
+	
 
 annimattion tombé, 
-	joueur pas sur le sol et l'animation de jump est arrèter.
+	joueur pas sur le sol et l'animation de jump est arrèter. (résolue)
 
 Ennemi:
-	Spawn aléatoirement sur différent spawn de la map et si le joueur a dépasser le spawn
-	aucune ennemi arrive a se spawn.
+	Spawn aléatoirement sur différent spawn de la map et si le joueur a dépasser le spawn (résolu)
 
-	ennemi qui cour, marche, saute
+	ennemi qui cour, marche, saute (résolu)
 
-	spawn dans les air et meur plas dos sur le sol
+	spawn dans les air et meur plas dos sur le sol (résolu)
 
-	ennemi 4 pates
+	ennemi 4 pates (cancelled)
 
 	ennemi Speed
 	Frames.SetAnimationSpeed("Anim Name", speed)

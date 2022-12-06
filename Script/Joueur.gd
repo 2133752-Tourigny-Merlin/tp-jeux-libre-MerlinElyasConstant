@@ -25,7 +25,7 @@ func _physics_process(delta):
 		_animated_sprite.play("CourirArme")
 	else:
 		# smoothen the stop
-		_animated_sprite.play("Innactif")
+		_animated_sprite.play("")
 		velocity.x = lerp(velocity.x, 0, 0.1)
 		
 	if Input.is_action_pressed("ui_up") and is_on_floor():
