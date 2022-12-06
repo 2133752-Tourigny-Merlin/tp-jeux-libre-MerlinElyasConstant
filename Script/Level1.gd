@@ -1,22 +1,20 @@
 extends Node2D
 
 var rng = RandomNumberGenerator.new()
-
-# Called when the node enters the scene tree for the first time.
-var TabSpawn = [$Map1/Spawn1, $Map1/Spawn2, $Map1/Spawn4, $Map1/Spawn5, $Map1/Spawn3]
+# Called when the node enters the scene tree for the first time
 var index_ajout_ennemi = 0
 
 var ennemiMax = 50
 var ennemiPresent = 0
-
+var ennemiTuer = 0
 func _ready():
 	pass
 
 func _process(delta):
+	#get_parent().ennemiTuer = get_parent().ennemiTuer + $Ennemi1.ennemi1Tuer
 	if ennemiPresent <= ennemiMax:
 		if index_ajout_ennemi == 60 || index_ajout_ennemi == 120:
 			var random = rng.randf_range(1, 5)
-			print(int(random))
 			if int(random) == 1:
 				AddEnnemi1()
 			elif int(random) == 2:
@@ -31,7 +29,7 @@ func _process(delta):
 			index_ajout_ennemi = 0
 		index_ajout_ennemi = index_ajout_ennemi + 1
 	else:
-		print("niveau2")
+		print("tuer tuot les ennemis")
 	
 func SpawnJoueur():
 	pass

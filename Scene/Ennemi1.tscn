@@ -72,7 +72,6 @@ __meta__ = {
 [node name="Apparence" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Marche"
-frame = 4
 playing = true
 flip_h = true
 __meta__ = {

@@ -9,6 +9,8 @@ const JUMP_FORCE = 400
 var index = 0
 var velocity = Vector2()
 
+func touche():
+	pass
 
 func _physics_process(delta):
 	velocity.y += 0.05 * GRAVITY
