@@ -8,7 +8,6 @@ func _ready():
 
 func _process(delta):
 	if ennemiTuer == 50:
-		print(get_node("Level1"))
 		get_node("Level1").queue_free()
 		$Joueur.position.x = 0
 		$Joueur.position.y = 0
@@ -16,5 +15,6 @@ func _process(delta):
 		$Joueur/Camera2D/Control/CompteARebours.minutes = 3
 		add_child(load("res://Scene/Level2Constant.tscn").instance())
 		ennemiTuer = ennemiTuer +1
-	print(ennemiTuer)
+	if ennemiTuer == 100:
+		get_tree().change_scene("res://Scene/MenuFin.tscn")
 		#print(ennemiTuerTotal)

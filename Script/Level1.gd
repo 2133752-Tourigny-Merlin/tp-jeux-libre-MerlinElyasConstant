@@ -27,8 +27,6 @@ func _process(delta):
 			AddEnnemi3();
 			index_ajout_ennemi = 0
 		index_ajout_ennemi = index_ajout_ennemi + 1
-	else:
-		print("tuer tuot les ennemis")
 	
 func SpawnJoueur():
 	pass

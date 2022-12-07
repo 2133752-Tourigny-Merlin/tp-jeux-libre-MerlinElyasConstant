@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/flatDark24.png-75be70b657108a07b7957d1d34b4b7f4.stex"
+path="res://.import/flatDark26.png-e1341fb92e9f73ec106e5b27ac53f489.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/flatDark24.png"
-dest_files=[ "res://.import/flatDark24.png-75be70b657108a07b7957d1d34b4b7f4.stex" ]
+source_file="res://Assets/Gui, menu/flatDark26.png"
+dest_files=[ "res://.import/flatDark26.png-e1341fb92e9f73ec106e5b27ac53f489.stex" ]
 
 [params]
 

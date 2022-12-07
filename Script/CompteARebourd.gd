@@ -10,11 +10,11 @@ func _physics_process(delta):
 	
 	if secondes > 0 and dsec <= 0 :
 		secondes -= 1
-		dsec = 10
+		dsec = 60
 		
 	if minutes > 0 and secondes <= 0:
 		minutes -= 1
-		secondes = 59
+		secondes = 60
 	
 		
 	if minutes >= 10:
@@ -35,7 +35,6 @@ func _physics_process(delta):
 
 func _on_Timer_timeout():
 	if  dsec == 0 and secondes == 0 and minutes == 0:
-		print(get_parent().get_parent().get_parent().vie)
 		get_parent().get_parent().get_parent().vie = 0
 	else:
 		dsec -= 1

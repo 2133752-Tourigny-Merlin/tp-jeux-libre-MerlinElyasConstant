@@ -29,7 +29,7 @@
 [ext_resource path="res://Assets/Assets Zombie/Zombie/Dead/zombie_Dead_8.png" type="Texture" id=27]
 [ext_resource path="res://Assets/Assets Zombie/Zombie/Hit/zombie_Hit_1.png" type="Texture" id=28]
 [ext_resource path="res://Assets/Assets Zombie/Zombie/Attack/zombie_Attack_2.png" type="Texture" id=29]
-[ext_resource path="res://Script/Ennemi.gd" type="Script" id=30]
+[ext_resource path="res://Script/Ennemi1.gd" type="Script" id=30]
 [ext_resource path="res://Assets/Assets Zombie/Blood Effect/splash/blood_Splash_0.png" type="Texture" id=31]
 
 [sub_resource type="SpriteFrames" id=1]
@@ -72,7 +72,7 @@ __meta__ = {
 [node name="Apparence" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "Marche"
-frame = 2
+frame = 1
 playing = true
 flip_h = true
 __meta__ = {

@@ -1,9 +1,9 @@
 extends KinematicBody2D
 
 
-const GRAVITY = 600
-const WALK_SPEED = 100
-const JUMP_FORCE = 600
+const GRAVITY = 120
+const WALK_SPEED = 105
+
 onready var _animated_sprite = $Apparence
 var velocity = Vector2()
 var life = 100
@@ -45,8 +45,8 @@ func  hit(damage):
 	if life <= 0:
 		dead()
 
-func _on_Timer_timeout():
-	queue_free()
+#func _on_Timer_timeout():
+	#queue_free()
 	
 func dead(): 
 	is_dead = true
